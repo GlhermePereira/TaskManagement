@@ -1,0 +1,48 @@
+iniciar postgresql
+
+sudo -u postgres psql
+
+Comandos Básicos
+Conectar a um Banco de Dados
+
+\c nome_do_banco_de_dados
+
+
+Listar Bancos de Dados
+
+\l
+
+Criar um Banco de Dados
+
+CREATE DATABASE nome_do_banco_de_dados;
+
+Excluir um Banco de Dados
+
+DROP DATABASE nome_do_banco_de_dados;
+
+Listar Tabelas
+\dt
+
+Mostrar a Estrutura de uma Tabela
+
+\d nome_da_tabela
+
+
+Criar uma Tabela
+
+CREATE TABLE nome_da_tabela (
+    coluna1 tipo1,
+    coluna2 tipo2,
+    ...
+);
+
+Excluir uma Tabela
+
+DROP TABLE nome_da_tabela;
+
+Alterar uma Tabela (Adicionar uma Coluna)
+
+ALTER TABLE nome_da_tabela ADD COLUMN nova_coluna tipo;
+Alterar uma Tabela (Remover uma Coluna)
+ALTER TABLE nome_da_tabela DROP COLUMN coluna;
+

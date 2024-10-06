@@ -1,0 +1,5 @@
+Gestao de tarefas com persistencia JDBC (console)
+
+Descricao: Crie um sistema de gestao de tarefas onde os usuarios podem cria, editar, e excluir tarefas, alem de marcar tarefas como concluidas. As tarefas devem ser categorizadas.
+
+Desafios: Implementar filtros para visualizar tarefas por categoria, status.

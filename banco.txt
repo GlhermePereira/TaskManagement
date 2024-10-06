@@ -1,0 +1,26 @@
+//categorias
+CREATE TABLE categorias (
+    id SERIAL PRIMARY KEY,
+    nm_nome VARCHAR(200) UNIQUE NOT NULL
+);
+
+-- Crie a tabela de tarefas
+CREATE TABLE tarefas (
+    id SERIAL PRIMARY KEY,
+    nm_titulo VARCHAR(255) NOT NULL,
+    ds_descricao TEXT,
+    id_categoria INTEGER REFERENCES categorias(id),
+    ic_status BOOLEAN DEFAULT FALSE,
+    dt_criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    dt_atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Adicione alguns dados iniciais para categorias
+INSERT INTO categorias (nm_nome) VALUES ('Trabalho');
+INSERT INTO categorias (nm_nome) VALUES ('Pessoal');
+INSERT INTO categorias (nm_nome) VALUES ('Compras');
+
+INSERT INTO tarefas (nm_titulo, ds_descricao, id_categoria, ic_status) VALUES
+('Reunião de Projeto', 'Reunião com a equipe de desenvolvimento.', 1, FALSE),
+('Comprar presente', 'Comprar presente para o aniversário do amigo.', 3, TRUE),
+('Dentista', 'Consulta de rotina com o dentista.', 2, FALSE);
